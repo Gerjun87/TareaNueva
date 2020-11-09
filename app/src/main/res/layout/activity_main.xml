@@ -1,73 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingTop="16dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
 
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/txtNombre"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/txt_Nombre"
-        android:inputType="text"
-        android:maxLines="1"
-        android:paddingTop="@dimen/Top"
-        android:layout_marginBottom="@dimen/Bottom" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <TextView
-        android:id="@+id/txtFnacimiento"
+        <include
+            android:id="@+id/miActionBar"
+            layout="@layout/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@mipmap/ic_home_page" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@mipmap/ic_my_page" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/Bottom"
-        android:paddingTop="@dimen/Top"
-        android:text="@string/txt_fecha" />
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/txtTel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/txt_tel"
-        android:inputType="text"
-        android:maxLines="1"
-        android:paddingTop="@dimen/Top"
-        android:layout_marginBottom="@dimen/Bottom" />
+    </androidx.viewpager.widget.ViewPager>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/txtemail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/txt_Email"
-        android:inputType = "textEmailAddress"
-        android:maxLines="1"
-        android:paddingTop="@dimen/Top"
-        android:layout_marginBottom="@dimen/Bottom" />
-
-     <EditText
-        android:id="@+id/txtDescr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint ="@string/txt_Descr"
-        android:inputType="textMultiLine"
-        android:paddingTop="@dimen/Top"
-        android:layout_marginBottom="@dimen/Bottom" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSiguiente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="81dp"
-        android:text="@string/boton1"
-        android:theme="@style/MiBotonRaised"/>
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

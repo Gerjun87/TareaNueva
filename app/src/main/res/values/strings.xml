@@ -1,17 +1,26 @@
 <resources>
-    <string name="app_name">Formulario</string>
-    <string name="txt_Nombre">Nombre Completo</string>
-    <string name="txt_fecha">Fecha de Nacimiento</string>
-    <string name="txt_tel">Telefono ó Celular</string>
-    <string name="txt_Email">Correo Electronico</string>
-    <string name="txt_Descr">Descripción Contacto</string>
-    <string name="boton1">Siguiente</string>
-    <string name="boton2">Editar Datos</string>
+    <string name="app_name">Petagram</string>
+    <string name="title_activity_detalle_contacto">DetalleContacto</string>
+    <string name="nombre">Esteban Garriga</string>
+    <string name="telefono">23644668</string>
+    <string name="email">estebangarriga@hotmail.com</string>
 
-    <string name="txtNombre">Nombre              :</string>
-    <string name="txtfecha" >Fecha de Nacimiento :</string>
-    <string name="txttel"   >Telefono de Contacto:</string>
-    <string name="txtEmail" >E-Mail :</string>
-    <string name="txtDescr" >Descripcion         :</string>
-
+    <!-- Contacto-->
+    <string name="pnombre">Nombre</string>
+    <string name="ptelefono">Telefono</string>
+    <string name="pemail">Email</string>
+    <!-- -->
+    <string name="amarillo_likes">15</string>
+    <string name="todo">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="estrella">Link a Favoritos</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_about">About</string>
+    <string name="Cmensaje">Escribe aqui tu mensaje !!</string>
+    <string name="boton_enviar">Enviar</string>
+    <string name="Miemail">estebangar@gmail.com</string>
+    <string name="Minombre">Esteban Garriga</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="boton_guardar">Guardar</string>
 </resources>
