@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimary"
-    app:titleTextColor="#FFF"
-    app:title="PetaGram"
-    app:layout_scrollFlags="scroll">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mytoolbar"
+        android:layout_height="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/estrella"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_estrella"/>
-    </RelativeLayout>
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways">
 
-</androidx.appcompat.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>
